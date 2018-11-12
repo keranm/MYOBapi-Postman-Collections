@@ -5395,44 +5395,9 @@
   ],
   "variable": [
     {
-      "id": "d6b55576-59ae-48cc-9f4a-682691b54904",
+      "id": "ac1b1b78-7942-4609-9103-c14c93754f74",
       "key": "api_uri",
-      "value": "The default URI for the MYOB API",
-      "type": "string",
-      "description": ""
-    },
-    {
-      "id": "3c8e52b7-a264-40bf-9b7e-dfa2d3b83235",
-      "key": "client_id",
-      "value": "This is your MYOB API Key",
-      "type": "string",
-      "description": ""
-    },
-    {
-      "id": "f208aa14-4dbc-4c83-b935-37c457e28ea4",
-      "key": "client_secret",
-      "value": "This is your MYOB API Secret",
-      "type": "string",
-      "description": ""
-    },
-    {
-      "id": "01223702-b8f9-4ced-8a6a-bf6a71a11011",
-      "key": "redirect_uri",
-      "value": "This is your application's redirect URI",
-      "type": "string",
-      "description": ""
-    },
-    {
-      "id": "dfaa07ea-4a3b-4d9d-babc-819c069e38c5",
-      "key": "refresh_token",
-      "value": "This is the refresh token from Authentication",
-      "type": "string",
-      "description": ""
-    },
-    {
-      "id": "1db1c932-9c91-4303-9112-bfc6f4da726b",
-      "key": "country",
-      "value": "This is the default country for the Essentials file",
+      "value": "https://api.myob.com/{{country}}/essentials",
       "type": "string",
       "description": ""
     }
