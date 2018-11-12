@@ -113,11 +113,11 @@
               "listen": "test",
               "script": {
                 "id": "9f030821-f5d8-46a1-93f0-303624975545",
-                "type": "text/javascript",
                 "exec": [
                   "var data = pm.response.json();",
                   "pm.environment.set(\"access_token\", data.access_token);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -178,11 +178,11 @@
               "listen": "test",
               "script": {
                 "id": "3761e3c3-7e38-4930-949e-c0f9689a0633",
-                "type": "text/javascript",
                 "exec": [
                   "var data = pm.response.json();",
                   "pm.environment.set(\"access_token\", data.access_token);"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -5366,7 +5366,7 @@
   "auth": {
     "type": "oauth2",
     "oauth2": {
-      "accessToken": "AAEAAHkpB4AFUNvogI77_niAsw4JLcbMawxcrd_FM59-0TVz5JXH-RU_QksYDBCTf8OyMtPVdi855hugUxLZ3XxQQ62dSaiDZtcNC7Pu-ULv4SiR351YRs07lwB6zDJCUPBOHE3SgBg4fnnSfAIi9kGQpJq0JvXbOkhsaCWG-3GwGRrEH_Xoi6x9mQswsRlJr0w2-VeOfxgu49nTXXS3j0QVbV5dgsenXy9RAhqDvJzxDZiTZ-NfLhO1kqOPU2Gjjz0woh1JM9i85UgJ0tSzmiX0fJswjpsAA75z61UJxEBYg-3bxPvaeCVfdlB3zPzON5uE8YtjiQqSi0lqL1zA23r3N6-kAQAAAAEAAASEmwJxjiEtkD1WGYuR2pUQGUfSS-61-XCkW559pp9j5CsZ5J_IGKSl09c15E0uOiRF_PzBxTxDWdBFAXhMEaVHV54rqqmWxaYWLpEjh4fBYBIM95guznWnxpuL_MnI95F40z0Z6jaTCxZVW9mnxRms9ruEzKX2dSUyIA5577LhPB-JxG1ms2V7M1B_55UJ3VZPFvlKV9yMZ7pcY1aiGHzJWVOgySNv98I1KYtdJqnj9eMwq_s5ILLDR0KPs-DVSVqrKRnPpFuooY7nkP6sJI0HmZOBUVk2kjkFXsZbA86G68oAWKPkAECKmj2fxWrYworx4qQ53E2g0rnKc3WTpM-gyHMQwnqCJs1Gx1a9eYlHPc7X17qUC8d7AZI1UzluLA-gSduxshuv-9ETJI3-3Vu-wNrroh-TpMSJAY7MQWzEGI9sfk3-EvxTVjDJBnB8KkoRZOTehIwfSMZ9Hq2irn72hgnSVktrCBW4yjGmanWiCXYfu2DrcjVIVEUgFrIsrRGBXrD97Ay1Z6qf706ut1WCC5du6RJyBL_qOow0p9CX",
+      "accessToken": "{{access_token}}",
       "tokenType": "bearer",
       "addTokenTo": "header"
     }
@@ -5395,9 +5395,16 @@
   ],
   "variable": [
     {
-      "id": "ac1b1b78-7942-4609-9103-c14c93754f74",
+      "id": "2d3ec0f7-5233-4247-ac26-033886c8b0c0",
       "key": "api_uri",
       "value": "https://api.myob.com/{{country}}/essentials",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "id": "47ad9fd3-0555-454a-a9a3-decac242dd26",
+      "key": "redirect_uri",
+      "value": "https://www.getpostman.com/oauth2/callback",
       "type": "string",
       "description": ""
     }
