@@ -5395,15 +5395,15 @@
   ],
   "variable": [
     {
-      "id": "cf821380-122d-4d69-a4d7-16640fc53d91",
+      "id": "d7112ccf-3dce-4651-85b0-c7549c03513d",
       "key": "api_uri",
       "value": "https://api.myob.com/{{country}}/essentials",
       "type": "string",
       "description": ""
     },
     {
-      "id": "3c6bea9b-ff12-4d88-b878-11a1cb9a4c55",
-      "key": "redirect_uri",
+      "id": "5a790ac0-0d1e-4098-ab27-07192559a140",
+      "key": "redirect_url",
       "value": "https://www.getpostman.com/oauth2/callback",
       "type": "string",
       "description": ""
