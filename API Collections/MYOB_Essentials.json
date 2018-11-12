@@ -178,11 +178,11 @@
               "listen": "test",
               "script": {
                 "id": "3761e3c3-7e38-4930-949e-c0f9689a0633",
+                "type": "text/javascript",
                 "exec": [
                   "var data = pm.response.json();",
                   "pm.environment.set(\"access_token\", data.access_token);"
-                ],
-                "type": "text/javascript"
+                ]
               }
             }
           ],
@@ -5395,14 +5395,14 @@
   ],
   "variable": [
     {
-      "id": "2d3ec0f7-5233-4247-ac26-033886c8b0c0",
+      "id": "cf821380-122d-4d69-a4d7-16640fc53d91",
       "key": "api_uri",
       "value": "https://api.myob.com/{{country}}/essentials",
       "type": "string",
       "description": ""
     },
     {
-      "id": "47ad9fd3-0555-454a-a9a3-decac242dd26",
+      "id": "3c6bea9b-ff12-4d88-b878-11a1cb9a4c55",
       "key": "redirect_uri",
       "value": "https://www.getpostman.com/oauth2/callback",
       "type": "string",
