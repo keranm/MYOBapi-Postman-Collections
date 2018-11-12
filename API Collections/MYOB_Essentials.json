@@ -19,10 +19,10 @@
               "listen": "test",
               "script": {
                 "id": "75b5851c-6330-4b97-b2ee-82ce43421820",
-                "type": "text/javascript",
                 "exec": [
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -38,35 +38,11 @@
               }
             ],
             "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "client_id",
-                  "value": "{{client_id}}",
-                  "description": "Enter the API Key here",
-                  "type": "text"
-                },
-                {
-                  "key": "client_secret",
-                  "value": "{{client_secret}}",
-                  "description": "Enter the API Secret here",
-                  "type": "text"
-                },
-                {
-                  "key": "grant_type",
-                  "value": "refresh_token",
-                  "type": "text"
-                },
-                {
-                  "key": "refresh_token",
-                  "value": "{{refresh_token}}",
-                  "description": "This is the refresh token given to you at time of Authentication",
-                  "type": "text"
-                }
-              ]
+              "mode": "raw",
+              "raw": ""
             },
             "url": {
-              "raw": "https://secure.myob.com/oauth2/account/authorize?client_id={{client_id}}&redirect_uri={{redirect_uri}}&response_type=code&scope=CompanyFile",
+              "raw": "https://secure.myob.com/oauth2/account/authorize?client_id={{client_id}}&redirect_uri={{redirect_uri}}&response_type=code&scope=la.global",
               "protocol": "https",
               "host": [
                 "secure",
@@ -96,8 +72,9 @@
                 },
                 {
                   "key": "scope",
-                  "value": "CompanyFile",
-                  "equals": true
+                  "value": "la.global",
+                  "equals": true,
+                  "description": "Needs to say la.global for Essentials scope"
                 }
               ]
             },
@@ -178,11 +155,12 @@
               "listen": "test",
               "script": {
                 "id": "3761e3c3-7e38-4930-949e-c0f9689a0633",
-                "type": "text/javascript",
                 "exec": [
                   "var data = pm.response.json();",
-                  "pm.environment.set(\"access_token\", data.access_token);"
-                ]
+                  "pm.environment.set(\"access_token\", data.access_token);",
+                  "pm.environment.set(\"refresh_token\", data.refresh_token);"
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -5395,15 +5373,15 @@
   ],
   "variable": [
     {
-      "id": "d7112ccf-3dce-4651-85b0-c7549c03513d",
+      "id": "5871fd94-64ef-4819-b84d-c351c0c1f034",
       "key": "api_uri",
       "value": "https://api.myob.com/{{country}}/essentials",
       "type": "string",
       "description": ""
     },
     {
-      "id": "5a790ac0-0d1e-4098-ab27-07192559a140",
-      "key": "redirect_url",
+      "id": "76d5a281-3d87-44c4-9088-d75d01c55700",
+      "key": "redirect_uri",
       "value": "https://www.getpostman.com/oauth2/callback",
       "type": "string",
       "description": ""
